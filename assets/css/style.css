@@ -1,0 +1,25 @@
+body {
+    background-image: url("../images/background.jpg");
+}
+
+.questionBox {
+    font-size: 24px;
+    background-color: bisque;
+}
+
+img {
+    max-height: 30em;
+}
+
+.correct-answer {
+    background-color: green;
+}
+
+.incorrect-answer {
+    background-color: red;
+}
+
+.time-left {
+    background-color: white;
+    font-size: 24px;
+}
