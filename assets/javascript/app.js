@@ -122,7 +122,7 @@ $(document).ready(function () {
             currentQuestion.prevRun = true;
             $(".score").innerHTML = correctAnswers + "/" + questionsAsked;
 
-            if (questionsAsked < 11) {
+            if (questionsAsked < 10) {
                 setTimeout(function () { currentQuestion = askQuestion(); }, 2000);
             } else {
                 let finalScore = correctAnswers * 10;
@@ -148,6 +148,7 @@ $(document).ready(function () {
             if (totalSeconds < 0) {
                 clearInterval(timer);
                 timeExpired = true;
+                questionsAsked++;
                 setTimeout(function () { currentQuestion = askQuestion(); }, 3000);
             }
         }
@@ -167,13 +168,6 @@ $(document).ready(function () {
                 shuffled[randIndex] = correctAns;
             }
             return shuffled;
-        }
-
-        function contains(selector, text) {
-            var elements = document.querySelectorAll(selector);
-            return Array.prototype.filter.call(elements, function (element) {
-                return RegExp(text).test(element.textContent);
-            });
         }
     }
 
