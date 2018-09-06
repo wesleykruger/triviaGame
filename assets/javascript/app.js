@@ -121,7 +121,7 @@ $(document).ready(function () {
             currentQuestion.prevRun = true;
             $(".score").innerHTML = correctAnswers + "/" + questionsAsked;
 
-            if (questionsAsked < 2) {
+            if (questionsAsked < 10) {
                 setTimeout(function () { currentQuestion = askQuestion(); }, 2000);
             } else {
                 let finalScore = correctAnswers * 10;
