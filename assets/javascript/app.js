@@ -163,7 +163,7 @@ $(document).ready(function () {
             let ansCheck = shuffled.slice(0, size);
             if (!ansCheck.includes(correctAns)) {
                 //pick random index and plug in the correct answer
-                let randIndex = Math.floor(Math.random() * 5) + 1;
+                let randIndex = Math.floor(Math.random() * 5);
                 shuffled[randIndex] = correctAns;
             }
             return shuffled;
