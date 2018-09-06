@@ -40,7 +40,6 @@ $(document).ready(function () {
         let totalSeconds;
         let timer;
 
-        //let askNow = 
         let currentQuestion = askQuestion();
 
         function askQuestion() {
@@ -122,19 +121,19 @@ $(document).ready(function () {
             currentQuestion.prevRun = true;
             $(".score").innerHTML = correctAnswers + "/" + questionsAsked;
 
-            if (questionsAsked < 10) {
+            if (questionsAsked < 2) {
                 setTimeout(function () { currentQuestion = askQuestion(); }, 2000);
             } else {
                 let finalScore = correctAnswers * 10;
                 document.querySelector(".questionBox").innerHTML = "Congratulations! Your score: " + finalScore + "%";
-                let replayDiv = document.createElement("a");
+                /*let replayDiv = document.createElement("a");
                 replayDiv.className = "btn btn-primary btn-lg game-start";
                 replayDiv.innerHTML = "Play Again?";
                 document.querySelector(".lead").appendChild(replayDiv);
                 $(".game-start").click(function () {
                     $(".lead").empty();
                     playGame();
-                });
+                });*/
             }
 
             clickDisabled = true;
